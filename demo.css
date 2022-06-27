@@ -14,12 +14,7 @@ option {
   background-color: gray;
 }
 
-form.nosubmit {
-  border: none;
-  padding: 0;
-}
-
-input.nosubmit {
+.google {
   width: 260px;
   border: 1px solid #555;
   display: block;
