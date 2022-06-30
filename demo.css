@@ -16,7 +16,7 @@ option {
 
 .google {
   width: 400px;
-  border: 1px solid #555;
+  border: 1px solid black;
   border-radius: 50px;
   display: block;
   padding: 9px 4px 9px 40px;
