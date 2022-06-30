@@ -9,7 +9,7 @@ table {
   width: 50%;
 }
 
-option {
+.cities option {
   color: white;
   background-color: gray;
 }
