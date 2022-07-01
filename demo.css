@@ -1,4 +1,5 @@
-#info,
+/* Problem 1 */
+#infoTable,
 th,
 td {
   border: 2px solid black;
@@ -6,10 +7,11 @@ td {
   text-align: center;
 }
 
-#info {
+#infoTable {
   width: 50%;
 }
 
+/* Problem 2 */
 .google {
   width: 400px;
   border: 1px solid black;
@@ -20,6 +22,7 @@ td {
     no-repeat 13px;
 }
 
+/* Problem 4 */
 .cities option {
   color: white;
   background-color: gray;
