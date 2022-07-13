@@ -5,28 +5,18 @@ const itemsObject = [
   { quantity: 5, price: 400 },
 ];
 
-function double(itemsObject) {
-  return itemsObject.map((item) => {
-    return {
-      quantity: item.quantity * 2,
-      price: item.price * 2,
-    };
-  });
-}
-console.log(double(itemsObject));
+const double = (itemsObject) =>
+  itemsObject.map((item) => ({
+    quantity: item.quantity * 2,
+    price: item.price * 2,
+  }));
 
-function filterItems(itemsObject) {
-  return itemsObject.filter((item) => {
-    return item.quantity > 2 && item.price > 300;
-  });
-}
+const filterItems = (itemsObject) =>
+  itemsObject.filter((item) => item.quantity > 2 && item.price > 300);
 console.log(filterItems(itemsObject));
 
-function totalValue(itemsObject) {
-  return itemsObject.reduce((acc, item) => {
-    return acc + item.quantity * item.price;
-  }, 0);
-}
+const totalValue = (itemsObject) =>
+  itemsObject.reduce((acc, item) => acc + item.quantity * item.price, 0);
 console.log(totalValue(itemsObject));
 
 // Problem 2
