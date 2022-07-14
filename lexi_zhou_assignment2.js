@@ -10,6 +10,7 @@ const double = (itemsObject) =>
     quantity: item.quantity * 2,
     price: item.price * 2,
   }));
+console.log(double(itemsObject));
 
 const filterItems = (itemsObject) =>
   itemsObject.filter((item) => item.quantity > 2 && item.price > 300);
