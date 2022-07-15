@@ -45,20 +45,20 @@ const second = [
 
 function merge(first, second) {
   let result = [];
-  for (const item of first) {
-    const index = second.findIndex((i) => i.uuid === item.uuid);
+  for (const ele of first) {
+    const index = second.findIndex((i) => i.uuid === ele.uuid);
     if (index !== -1) {
-      const { uuid, name, role } = { ...item, ...second[index] };
+      const { uuid, name, role } = { ...ele, ...second[index] };
       result.push({ uuid, name, role });
     } else {
-      const { uuid, name } = item;
+      const { uuid, name } = ele;
       result.push({ uuid, name, role: null });
     }
   }
-  for (const item of second) {
-    const index = first.findIndex((i) => i.uuid === item.uuid);
+  for (const ele of second) {
+    const index = first.findIndex((i) => i.uuid === ele.uuid);
     if (index == -1) {
-      const { uuid, role } = item;
+      const { uuid, role } = ele;
       result.push({ uuid, name: null, role });
     }
   }
