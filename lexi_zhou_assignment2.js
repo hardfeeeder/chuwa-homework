@@ -43,20 +43,20 @@ const second = [
   { uuid: 2, role: "associate" },
 ];
 
-function merge(first, second) {
+function merge(arr1, arr2) {
   let result = [];
-  for (const ele of first) {
-    const index = second.findIndex((i) => i.uuid === ele.uuid);
+  for (const ele of arr1) {
+    const index = arr2.findIndex((i) => i.uuid === ele.uuid);
     if (index !== -1) {
-      const { uuid, name, role } = { ...ele, ...second[index] };
+      const { uuid, name, role } = { ...ele, ...arr2[index] };
       result.push({ uuid, name, role });
     } else {
       const { uuid, name } = ele;
       result.push({ uuid, name, role: null });
     }
   }
-  for (const ele of second) {
-    const index = first.findIndex((i) => i.uuid === ele.uuid);
+  for (const ele of arr2) {
+    const index = arr1.findIndex((i) => i.uuid === ele.uuid);
     if (index == -1) {
       const { uuid, role } = ele;
       result.push({ uuid, name: null, role });
