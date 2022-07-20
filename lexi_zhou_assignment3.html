@@ -91,7 +91,7 @@
     <hr />
 
     <p>Problem 3</p>
-    <select name="cities" class="arr"></select>
+    <select class="cities"></select>
     <script>
       const dropDownList = [
         { value: "newark", content: "Newark" },
@@ -102,13 +102,18 @@
         { value: "sanJose", content: "San Jose" },
       ];
 
-      // let cities = document.getElementsByClassName("cities");
-      // let options = dropDownList.map((item) => {
-      //   let option = document.createElement("option");
-      //   option.textContent = item;
-      //   return option;
-      // });
-      // cities.append(...option);
+      let select = document.querySelector(".cities");
+      let elmts = dropDownList.map(function (ele) {
+        return ele.content;
+      });
+
+      for (let i = 0; i < elmts.length; i++) {
+        let optn = elmts[i];
+        let options = document.createElement("option");
+        options.textContent = optn;
+        options.value = optn;
+        select.appendChild(options);
+      }
     </script>
     <hr />
   </body>
