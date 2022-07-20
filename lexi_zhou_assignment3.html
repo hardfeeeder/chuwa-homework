@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework3</title>
+    <link rel="stylesheet" href="demo.css" />
+  </head>
+  <body>
+    <p>Problem 1</p>
+
+    <p>Problem 2</p>
+    <ol id="ol"></ol>
+    <ul id="ul"></ul>
+    <script>
+      const list = ["HTML", "JavaScript", "CSS", "React", "Redux", "Java"];
+
+      let ol = document.getElementById("ol");
+      list.forEach((item) => {
+        let li = document.createElement("li");
+        li.textContent = item;
+        ol.appendChild(li);
+      });
+
+      let ul = document.querySelector("#ul");
+      let nodes = list.map((item) => {
+        let li = document.createElement("li");
+        li.textContent = item;
+        return li;
+      });
+      ul.append(...nodes);
+    </script>
+    <hr />
+
+    <p>Problem 3</p>
+    <select name="cities" class="arr"></select>
+    <script>
+      const dropDownList = [
+        { value: "newark", content: "Newark" },
+        { value: "santaClara", content: "Santa Clara" },
+        { value: "unionCity", content: "Union City" },
+        { value: "albany", content: "Albany" },
+        { value: "dalyCity", content: "Daly City" },
+        { value: "sanJose", content: "San Jose" },
+      ];
+
+      // let cities = document.getElementsByClassName("cities");
+      // let options = dropDownList.map((item) => {
+      //   let option = document.createElement("option");
+      //   option.textContent = item;
+      //   return option;
+      // });
+      // cities.append(...option);
+    </script>
+    <hr />
+  </body>
+</html>
