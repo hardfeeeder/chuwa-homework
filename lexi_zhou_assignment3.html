@@ -9,6 +9,67 @@
   </head>
   <body>
     <p>Problem 1</p>
+    <div>
+      <button>Get</button>
+      <div id="table"></div>
+    </div>
+
+    <script>
+      let btnGet = document.querySelector("button");
+      let myTable = document.querySelector("#table");
+      const tableInfo = {
+        tableHeader: ["Student Name", "Age", "Phone", "Address"],
+        tableContent: [
+          {
+            "Student Name": "John",
+            Age: 19,
+            Phone: "455 - 983 - 0903",
+            Address: "123 Ave, San Francisco, CA, 94011",
+          },
+          {
+            "Student Name": "Alex",
+            Age: 21,
+            Phone: "455 - 983 - 0912",
+            Address: "456 Rd, San Francisco, CA, 94012",
+          },
+          {
+            "Student Name": "Josh",
+            Age: 22,
+            Phone: "455 - 345 - 0912",
+            Address: "789 Dr, Newark, CA, 94016",
+          },
+          {
+            "Student Name": "Matt",
+            Age: 23,
+            Phone: "321 - 345 - 0912",
+            Address: "223 Dr, Sunnyvale, CA, 94016",
+          },
+        ],
+      };
+      let headers = tableInfo.tableHeader;
+      btnGet.addEventListener("click", () => {
+        let table = document.createElement("table");
+        let headerRow = document.createElement("tr");
+        headers.forEach((headerText) => {
+          let header = document.createElement("th");
+          let textNode = document.createTextNode(headerText);
+          header.appendChild(textNode);
+          headerRow.appendChild(header);
+        });
+        table.appendChild(headerRow);
+        tableInfo.tableContent.forEach((emp) => {
+          let row = document.createElement("tr");
+          Object.values(emp).forEach((text) => {
+            let cell = document.createElement("td");
+            let textNode = document.createTextNode(text);
+            cell.appendChild(textNode);
+            row.appendChild(cell);
+          });
+          table.appendChild(row);
+        });
+        myTable.appendChild(table);
+      });
+    </script>
 
     <p>Problem 2</p>
     <ol id="ol"></ol>
